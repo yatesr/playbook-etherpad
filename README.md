@@ -1,4 +1,4 @@
-playbook-openmrs
+playbook-etherpad
 ======================
 
 An Ansible playbook for deploying [etherpad lite](http://etherpad.org/).
