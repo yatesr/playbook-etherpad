@@ -1,7 +1,7 @@
 playbook-etherpad
 ======================
 
-An Ansible playbook for deploying [etherpad lite](http://etherpad.org/).
+An Ansible playbook for deploying [etherpad lite](http://etherpad.org/).  
 Adapted from https://github.com/p2pu/marvin/tree/master/etherpad-lite-install
 
 ## What it does
@@ -28,6 +28,5 @@ Drop the -k if you are logging in with a public/private key.
 
 `ansible-playbook -i hosts install.yml`
 
-TODO:
-Configure nginx SSL reverse proxy 
-Modularize play
+TODO:  
+  Configure nginx SSL reverse proxy, modularize play
