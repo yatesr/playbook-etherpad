@@ -1,0 +1,31 @@
+upstream etherpad-lite {
+    server 127.0.0.1:9001;
+}
+server {
+        listen       80;
+
+        # Allow normal files to pass through
+        location ~ ^/(locales/|locales.json|admin/|static/|pluginfw/|javascripts/|socket.io/|ep/|minified/|api/|ro/|error/|jserror/|favicon.ico|robots.txt) {
+                proxy_buffering off;
+                proxy_pass http://etherpad-lite;
+        }
+
+        # Redirect to force /p/* URLs to the friendly version
+        location /p/ {
+                rewrite ^/p/(.*) /$1 redirect;
+        }
+
+        # Match the home page
+        location ~ ^/$ {
+                proxy_buffering off;
+                proxy_pass http://etherpad-lite;
+        }
+
+        # Handle pad URLs here
+        location / {
+		rewrite ^/admin(.*) /admin/$1 redirect;
+                proxy_buffering off;
+                proxy_pass http://etherpad-lite/p/;
+                proxy_redirect / /p/;
+        }
+    }

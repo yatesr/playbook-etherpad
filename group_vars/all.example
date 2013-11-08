@@ -1,0 +1,6 @@
+db_name: etherpadlite
+db_user: etherpadlite
+db_password: password
+session_key: "LongKeyHereAtLeast10Chars"
+padadmin_password: adminpwd
+etherpad_version: release/1.3
