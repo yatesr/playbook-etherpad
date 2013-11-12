@@ -1,5 +1,6 @@
 hosts
 group_vars/all
+roles/ssl/files/*
 
 ## OSX
 .DS_Store

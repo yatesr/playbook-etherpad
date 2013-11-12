@@ -16,6 +16,7 @@
     - mysql-client
     - python-mysqldb
     - abiword
+    - curl
 
   - name: install python-software-properties
     apt: pkg=python-software-properties state=installed

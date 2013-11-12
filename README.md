@@ -1,7 +1,7 @@
 playbook-etherpad
 ======================
 
-An Ansible playbook for deploying [etherpad lite](http://etherpad.org/).  
+An Ansible playbook for deploying [etherpad lite](https://github.com/ether/etherpad-lite).  
 Adapted from https://github.com/p2pu/marvin/tree/master/etherpad-lite-install
 
 ## What it does
